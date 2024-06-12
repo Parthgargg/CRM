@@ -21,9 +21,9 @@ const start = async () => {
   }
 };
 start();
-// app.get("/", (req, res) => {
-//   res.send("<h1>Welcome to Book Store</h1>");
-// });
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to Book Store</h1>");
+});
 app.use(express.static("public"));
 app.use(bookRoute);
 
