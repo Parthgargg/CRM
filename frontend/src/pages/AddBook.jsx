@@ -15,7 +15,7 @@ const AddBook = () => {
     try {
       const data = { Name, Money, Day };
       setLoading(true);
-      const resp = await axios.post(`${SERVER_URL}/book`, data);
+      const resp = await axios.post('https://crm-api-ruby.vercel.app/', data);
       console.log(resp.data);
       setLoading(false);
       enqueueSnackbar("Booking added successfully", { variant: "success" });
