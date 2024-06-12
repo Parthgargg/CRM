@@ -5,12 +5,7 @@ import bookRoute from "./routes/bookRoute.js";
 import cors from "cors";
 const app = express();
 app.use(express.json()); // set the server to accept json data
-app.use(cors({
-    origin:["https://crm-api-ruby.vercel.app/"],
-    methods:["POST","GET"],
-    credetials:true
-}
-            ));
+app.use(cors());
 
 const PORT = process.env.PORT;
 
